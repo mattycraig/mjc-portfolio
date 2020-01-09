@@ -12,7 +12,6 @@
             .intro-line.intro-line--regular
               span Construct
 
-    img(class="greet-image" src="../../uploads/hello.svg")
     h2.mb-4 Gridsome starter bootstrap
     p.
       This is a starter project for Gridsome that comes with many features out of the box. It utilizes Bootstrap that is well known for powerful styling and layout. Ready to be deployed, automagically imports data to CMS and sets up your /admin page for easy access to edit your content.
@@ -23,11 +22,11 @@
 </template>
 
 <script>
-import Intro from '~/components/Intro';
+import Intro from "~/components/Intro";
 
 export default {
   metaInfo: {
-    title: 'Gridsome starter bootstrap'
+    title: "Home"
   },
   components: {
     Intro
@@ -35,12 +34,4 @@ export default {
 };
 </script>
 
-<style>
-.greet-image {
-  display: block;
-  margin: auto;
-  width: 90%;
-  max-width: 500px;
-  padding-bottom: 50px;
-}
-</style>
+<style lang="scss" scoped></style>

@@ -8,11 +8,24 @@
       nav.navigation
         ul.nav.nav-main
           li
-            button.btn.btn-link.nav-item(:class="{'nav-active': showMenu}" v-on:click="showMenu = !showMenu")
-              span.text-white 1
+            button.btn.btn-link.nav-item(:class="{'nav-active': showMenu}" v-on:click="showMenu = !showMenu; showWorks = false")
+              .nav-icon.nav-icon-menu
+                span
+                span
+                span
+                span
+                
           li
-            button.btn.btn-link.nav-item
-              span.text-white 2
+            button.btn.btn-link.nav-item(:class="{'nav-active': showWorks}" v-on:click="showWorks = !showWorks; showMenu = false")
+              .nav-icon.nav-icon-works
+                span
+                span
+                span
+                span
+                span
+                span
+                span
+                span
           li
             button.btn.btn-link.nav-item
               span.text-white 3
@@ -33,6 +46,24 @@
 
     transition(name="menu")
       Menu(v-if="showMenu")
+        li.menu-item
+          g-link.menu-link(to='/about') About
+        li.menu-item
+          g-link.menu-link(to='/blog') Blog
+        li.menu-item
+          g-link.menu-link(to='/#') Works
+        li.menu-item
+          g-link.menu-link(to='/contact') Contact
+
+      Menu(v-if="showWorks")
+        li.menu-item
+          g-link.menu-link(to='/#') Works1
+        li.menu-item
+          g-link.menu-link(to='/#') Works2
+        li.menu-item
+          g-link.menu-link(to='/#') Works3
+        li.menu-item
+          g-link.menu-link(to='/#') Works4
 
 </template>
 
@@ -45,7 +76,8 @@ export default {
   },
   data() {
     return {
-      showMenu: false
+      showMenu: false,
+      showWorks: false
     };
   }
 };
@@ -128,14 +160,12 @@ export default {
       display: block;
       width: $dimensions-mobile;
       height: $dimensions-mobile;
-      // line-height: $dimensions-mobile;
       text-align: center;
       position: relative;
 
       @include media-breakpoint-up(lg) {
         width: $dimensions-large;
         height: $dimensions-large;
-        // line-height: $dimensions-large;
       }
     }
   }
@@ -157,6 +187,63 @@ export default {
         height: calc(100% + 4px);
         content: "";
         background: linear-gradient($primary, $secondary);
+      }
+    }
+
+    &:after {
+      position: absolute;
+      top: 100%;
+      left: -1px;
+      width: $dimensions-mobile;
+      height: 1px;
+      content: "";
+      display: block;
+      background: $gray-900;
+
+      @include media-breakpoint-up(lg) {
+        top: -1px;
+        left: auto;
+        right: -1px;
+        width: 1px;
+        height: $dimensions-large;
+      }
+    }
+  }
+
+  &-icon {
+    width: 30px;
+    display: inline-block;
+    vertical-align: middle;
+
+    &-menu {
+      span {
+        display: block;
+        height: 3px;
+        background: $gray-600;
+        margin: 0 0 3px;
+        border-radius: 2px;
+
+        &:last-of-type {
+          margin: 0;
+          width: 50%;
+        }
+      }
+    }
+
+    &-works {
+      width: 34px;
+      span {
+        display: block;
+        float: left;
+        height: 8px;
+        width: 8px;
+        background: $gray-600;
+        margin: 0 2px 3px;
+        border-radius: 2px;
+
+        &:nth-of-type(3n) {
+          margin-right: 0;
+        }
       }
     }
   }
