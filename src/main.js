@@ -17,9 +17,17 @@ import {
   faDribbble,
   faLinkedinIn
 } from '@fortawesome/free-brands-svg-icons';
+import { faTimes, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
-library.add(faGithub, faTwitter, faDribbble, faLinkedinIn);
+library.add(
+  faGithub,
+  faTwitter,
+  faDribbble,
+  faLinkedinIn,
+  faTimes,
+  faPencilAlt
+);
 
 // ETC
 // import checkIfMobile from './mixins/checkIfMobile';

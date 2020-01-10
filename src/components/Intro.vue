@@ -11,7 +11,7 @@
   position: relative;
   overflow: hidden;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     min-height: 600px;
   }
 
@@ -20,7 +20,7 @@
     width: 200%;
     height: 400px;
     background: $white;
-    content: '';
+    content: "";
     transform: rotate(-10deg);
     position: absolute;
     bottom: -200px;
@@ -32,7 +32,7 @@
     position: relative;
     min-height: 500px;
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       min-height: 600px;
     }
   }
@@ -50,7 +50,7 @@
     position: relative;
     display: flex;
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       font-size: 80px;
     }
 
@@ -61,7 +61,7 @@
       box-shadow: $box-shadow-lg;
       // border-radius: $border-radius;
 
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(md) {
         padding: 0 $spacer;
         height: 100px;
       }

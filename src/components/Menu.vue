@@ -1,5 +1,7 @@
 <template lang="pug">
   nav.menu
+    button.btn.btn-link.menu-close(v-on:click='close()')
+      font-awesome(:icon="['fas', 'times']")
     ul
       slot
 
@@ -7,10 +9,9 @@
 
 <script>
 export default {
-  props: {
-    showMenu: {
-      type: Boolean,
-      default: false
+  methods: {
+    close() {
+      this.$emit("close");
     }
   }
 };
@@ -19,14 +20,14 @@ export default {
 <style lang="scss">
 .menu {
   position: fixed;
-  z-index: $zindex-fixed + 1;
+  z-index: $zindex-fixed - 1;
   top: $dimensions-mobile;
   left: 0;
   width: 100%;
   background: rgba($gray-900, 0.9);
   height: calc(100% - #{$dimensions-mobile});
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     top: 0;
     left: $dimensions-large;
     height: 100%;
@@ -44,7 +45,7 @@ export default {
     border-left: 1px solid $gray-800;
     border-right: 1px solid $gray-800;
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       border-left: 0;
       border-right: 0;
       border-top: 1px solid $gray-800;
@@ -58,7 +59,7 @@ export default {
     background: $gray-900;
     border-bottom: 1px solid $gray-800;
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       float: left;
       height: 100%;
       width: 25%;
@@ -74,9 +75,24 @@ export default {
     align-items: center;
     color: $gray-600;
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: $white;
+    }
+  }
+
+  &-close {
+    position: absolute;
+    bottom: $spacer / 2;
+    right: $spacer / 2;
+    color: $gray-700 !important;
+
+    &:hover {
+      color: $white !important;
+    }
+
+    @include media-breakpoint-up(md) {
+      bottom: auto;
+      top: $spacer / 2;
     }
   }
 }

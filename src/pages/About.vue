@@ -14,11 +14,11 @@
 </template>
 
 <script>
-import Intro from '~/components/Intro';
+import Intro from "~/components/Intro";
 
 export default {
   metaInfo: {
-    title: 'About'
+    title: "About"
   },
   components: {
     Intro
