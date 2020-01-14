@@ -2,7 +2,7 @@
   Layout
   
     template(slot='intro')
-      Intro
+      Intro.intro-alt
         .intro-copy
           h1
             .intro-line.intro-line--regular

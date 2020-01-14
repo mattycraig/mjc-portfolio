@@ -14,10 +14,10 @@
               span Construct
           .intro-subline
             | UI Designer / Frontend Developer / 
-            span.text-dark Matthew Jason Craig
-        .intro-desc
-          p.
-            I build sustainable, performant, and meaningful frontend experiences. I have a definitive eye for high-quality user experience and good user interface design. I specialize in writing and designing scalable CSS architectures, maintainable, sharable code and performance optimization.
+            span.text-white Matthew Jason Craig
+
+        //- .intro-cta
+        //-   g-link.btn.btn-lg.btn-primary(to='/#') Work Showcase
 
     //- h2.mb-4 Gridsome starter bootstrap
     //- p.

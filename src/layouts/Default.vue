@@ -34,7 +34,7 @@ body {
 }
 
 main {
-  margin-top: $dimensions-mobile;
+  // margin-top: $dimensions-mobile;
 
   @include media-breakpoint-up(md) {
     margin-top: 0;

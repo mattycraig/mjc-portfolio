@@ -33,16 +33,16 @@
             
         ul.nav.nav-social.d-none.d-lg-flex
           li
-            g-link.nav-item(to='/#')
+            a.nav-item(href='https://twitter.com/mattjasoncraig' target='_blank')
               font-awesome(:icon="['fab', 'twitter']")
           li
-            g-link.nav-item(to='/#')
+            a.nav-item(href='https://github.com/mattycraig' target='_blank')
               font-awesome(:icon="['fab', 'github']")
           li
-            g-link.nav-item(to='/#')
+            a.nav-item(href='https://dribbble.com/mattycraig' target='_blank')
               font-awesome(:icon="['fab', 'dribbble']")
           li
-            g-link.nav-item(to='/#')
+            a.nav-item(href='https://linkedin.com/in/matthewjasoncraig' target='_blank')
               font-awesome(:icon="['fab', 'linkedin-in']")
 
     transition(name="menu")
@@ -50,9 +50,9 @@
         li.menu-item
           g-link.menu-link(to='/about') About
         li.menu-item
-          g-link.menu-link(to='/blog') Works
+          g-link.menu-link(to='/works') Works
         li.menu-item
-          g-link.menu-link(to='/#') Blog
+          g-link.menu-link(to='/blog') Blog
         li.menu-item
           g-link.menu-link(to='/contact') Contact
 
