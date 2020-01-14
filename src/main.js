@@ -17,7 +17,11 @@ import {
   faDribbble,
   faLinkedinIn
 } from '@fortawesome/free-brands-svg-icons';
-import { faTimes, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faTimes,
+  faPencilAlt,
+  faHeart
+} from '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
 library.add(
@@ -26,7 +30,8 @@ library.add(
   faDribbble,
   faLinkedinIn,
   faTimes,
-  faPencilAlt
+  faPencilAlt,
+  faHeart
 );
 
 // ETC

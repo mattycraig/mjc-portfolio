@@ -250,8 +250,12 @@ query Blog {
       position: relative;
 
       &:hover {
-        .nav-icon span {
-          background: $white;
+        .nav-icon {
+          color: $white;
+
+          span {
+            background: $white;
+          }
         }
       }
 
@@ -302,6 +306,8 @@ query Blog {
     }
 
     .nav-icon {
+      color: $white;
+
       span {
         background: $white;
       }
@@ -312,6 +318,7 @@ query Blog {
     width: 30px;
     display: inline-block;
     vertical-align: middle;
+    transition: $transition-base;
 
     span {
       transition: $transition-base;

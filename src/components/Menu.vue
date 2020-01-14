@@ -58,6 +58,7 @@ export default {
     height: 25%;
     background: $gray-900;
     border-bottom: 1px solid $gray-800;
+    padding: 0 $spacer * 2;
 
     @include media-breakpoint-up(md) {
       float: left;

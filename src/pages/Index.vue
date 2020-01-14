@@ -3,6 +3,7 @@
     
     template(slot='intro')
       Intro
+        g-image.intro-image(alt='Works' src='~/assets/images/mjc-work-template.png' immediate='true' quality='100')
         .intro-copy
           h1
             .intro-line.intro-line--regular
@@ -11,13 +12,16 @@
               span Discover
             .intro-line.intro-line--regular
               span Construct
+          .intro-subline
+            | UI Designer / Frontend Developer / 
+            span.text-dark Matthew Jason Craig
+        .intro-desc
+          p.
+            I build sustainable, performant, and meaningful frontend experiences. I have a definitive eye for high-quality user experience and good user interface design. I specialize in writing and designing scalable CSS architectures, maintainable, sharable code and performance optimization.
 
-    h2.mb-4 Gridsome starter bootstrap
-    p.
-      This is a starter project for Gridsome that comes with many features out of the box. It utilizes Bootstrap that is well known for powerful styling and layout. Ready to be deployed, automagically imports data to CMS and sets up your /admin page for easy access to edit your content.
-      
-    p.
-      It is designed to use Netlify, Forestry and Github which all have very fair free tier to their services, so you wont need to pay for monthly subscriptions and costly hosting fees.
+    //- h2.mb-4 Gridsome starter bootstrap
+    //- p.
+    //-   I build sustainable, performant, and meaningful frontend experiences. I have a definitive eye for high-quality user experience and good user interface design. I specialize in writing and designing scalable CSS architectures, maintainable, sharable code and performance optimization.
     
 </template>
 
